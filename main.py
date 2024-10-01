@@ -19,7 +19,7 @@ app = FastAPI(
     contact={
         "email": "mf-live@" + domain_url.split("//")[-1].replace("/", ""),
     },
-    docs_url=""
+    docs_url="/"
 )
 
 
