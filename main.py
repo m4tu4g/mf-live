@@ -45,7 +45,7 @@ class FundResponseDTO(BaseModel):
 
 @app.exception_handler(404)
 async def custom_404_handler(req, exc):
-    return RedirectResponse(url=domain_url, status_code=redirect_status_code)
+    return RedirectResponse(url="/", status_code=redirect_status_code)
 
 
 @app.get("/mutual-funds/{mutual_fund}", tags=["mutual-funds"])
