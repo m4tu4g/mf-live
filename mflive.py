@@ -121,8 +121,10 @@ class MFLive:
                 "not_matched" : self.not_matched
             })
 
-        await self.httpx_client.aclose()
         return response
+
+    async def __del__ (self):
+        await self.httpx_client.aclose()
 
 
 if __name__ == "__main__":
